@@ -19,4 +19,7 @@ jobs:
       - name: Checkout repository to runner
         uses: actions/checkout@v4
         with:
-          ref: ${{ (github.ref_type == 'tag' && github.ref_name == 'v[0-9]+.[0-9]+.[0-9]+') && github.ref_name || inputs.target }}
+          ref: >
+            ${{ (github.ref_type == 'tag' && github.ref_name == 'v[0-9]+.[0-9]+.[0-9]+')
+            && github.ref_name
+            || inputs.target }}
