@@ -1,0 +1,13 @@
+name: Testing things
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump contexts
+        run: echo "${{ github }}"
