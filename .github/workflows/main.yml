@@ -7,6 +7,12 @@ on:
     inputs:
       target:
         default: "main"
+
+env:
+  GIT_CURL_VERBOSE: True
+  GIT_TRACE: True
+  GIT_SSH_COMMAND: ssh -vvv
+
 jobs:
   build:
     runs-on: ubuntu-latest
