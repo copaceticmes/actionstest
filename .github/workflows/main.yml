@@ -19,4 +19,6 @@ jobs:
       - name: Checkout repository to runner
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.target }}
+          ref: ''
+          # ref: ${{ inputs.target }}
+              
